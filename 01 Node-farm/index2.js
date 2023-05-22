@@ -1,5 +1,5 @@
 const http = require('http')
-
+const url = require('url')
 
 
 /////////////////////SERVER
@@ -7,7 +7,19 @@ const http = require('http')
 //2.start server
 
 const server = http.createServer((req , res) =>{
-    res.end('hello from the server !')
+    // console.log(req);
+    // console.log(req.url);
+    // res.end('hello from the server !')
+
+    const pathName = req.url;
+
+    if(pathName === '/' || pathName === '/overview'){
+        res.end('This is OVERVIEW PAGE');
+    }else if(pathName === '/product'){
+        res.end('This is PRODUCT PAGE');
+    }else{
+        res.end('PAGE IS NOT FOUND')
+    }
 })
 
 server.listen(8000 , '127.0.0.1', () => {
