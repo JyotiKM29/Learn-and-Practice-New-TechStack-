@@ -33,7 +33,32 @@
         >
           Get Started
         </a>
+
+       
       </div>
+       <!-- Hamburger Menu -->
+       <button
+       id="menu-btn"
+       class=" block hamburger md:hidden focus:outline-none"
+     >
+       <span class="hamburger-top"></span>
+       <span class="hamburger-middle"></span>
+       <span class="hamburger-bottom"></span>
+     </button>
+
+     <!-- Mobile Menu -->
+     <div class="md:hidden">
+       <div
+         id="menu"
+         class="absolute  flex-col items-center self-end hidden py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+       >
+         <a href="#">Pricing</a>
+         <a href="#">Product</a>
+         <a href="#">About us</a>
+         <a href="#">Career</a>
+         <a href="#">Community</a>
+       </div>
+     </div>
     </nav>
 
     <!-- Hero Section  -->
@@ -289,9 +314,9 @@
         <div
           class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start"
         >
-        <div class="mx-auto my-6 text-center text-white md:hidden">
+          <div class="mx-auto my-6 text-center text-white md:hidden">
             build with ❤️ by Jyoti KM
-        </div>
+          </div>
           <!-- Logo -->
           <div>
             <img src="img/logo-white.svg" alt="logo white" class="'h-8" />
@@ -353,7 +378,9 @@
                 class="flex-1 px-4 rounded-full focus:outline-none"
                 placeholder="Updates in your inbox"
               />
-              <button class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none">
+              <button
+                class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none"
+              >
                 Go
               </button>
             </div>
@@ -364,5 +391,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
