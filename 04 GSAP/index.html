@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>GSAP</title>
+  </head>
+  <body>
+    <secction id="hero">
+      <h1 class="text-5xl font-bold underline p-2 mt-12 text-red-500">
+        Practice GSAP
+      </h1>
+      <div class="flex flex-row justify-center">
+        <div class="flex flex-col">
+          <p class="text-2xl w-1/2 px-4 py-6 text-gray-500">
+            Roughly HALF the file size of the old TweenMax...but it has even
+            more features. New plugin for animating things along motion paths
+            (you can even edit the motion path in the browser!)
+          </p>
+          <button
+            class="ml-4 p-3 px-6 pt-2 rounded-full bg-red-500 text-white w-1/3"
+          >
+            Get Started
+          </button>
+        </div>
+
+        <img src="Jyoti.jpeg" alt="jyoti" class="h-96" />
+      </div>
+      <div class="flex flex-col">
+        <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
+            Practice makes things perfect
+        </h2>
+        <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
+            Repeat things
+        </h2>
+        <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
+            Imange Things in mind
+        </h2>
+        <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
+            just start doing
+        </h2>
+        <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
+            Practice makes things perfect
+        </h2>
+        <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
+            Repeat things
+        </h2>
+        <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
+            Imange Things in mind
+        </h2>
+        <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
+            just start doing
+        </h2>
+      </div>
+
+
+      <div class="text-5xl font-bold  p-2 mt-12 ml-12 text-red-500">
+        <h3 id="anime2">Live your Dream ...</h3>
+        <h3 id="anime2">You Made this ,</h3>
+        <h3 id="anime2">Billion dollar Company</h3>
+      </div>
+    </secction>
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script>
+      gsap.from("p", { opacity: 0, duration: 1, y: -100 , ease: Sine.easeOut  });
+      gsap.from("button,h1", {  delay:1.4 ,opacity: 0, duration: 1, y: -100 , ease: Sine.easeOut });
+
+      gsap.from('img',{duration:1 ,y:50 ,opacity:0})
+      gsap.from('#anime', {opacity:0 ,duration: 1, y: -30, stagger:0.6})
+
+      gsap.from("anime2", { opacity: 0, duration: 1, y: -100 , ease: power2.easeOut  });
+
+    //   background positioning :'200px 0px'
+    </script>
+  </body>
+</html>
