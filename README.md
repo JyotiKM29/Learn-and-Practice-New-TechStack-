@@ -1,2 +1,4 @@
-# Backend_Bootcamp
-this Practice File for  Node.js , Express and MongoDB 
+# Learning and Practicing new TechStack
+1. Node.js
+2. TailwindCss
+3. TypeScript
