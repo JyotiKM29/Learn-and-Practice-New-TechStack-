@@ -35,8 +35,8 @@ body{
     width: 24px;
     height: 24px;
     transition: all .25s;
-    position: relative;
-    /* top:0;
+    /* position: relative;
+    top:0; 
     right:0; */
 }
 
@@ -45,8 +45,8 @@ body{
 .hamburger-bottom{
     position: absolute;
     
-    top: 0;
-    left: 0;
+    top: 20%;
+    right: 5%;
     width: 24px;
     height: 2px;
     background-color: black;
