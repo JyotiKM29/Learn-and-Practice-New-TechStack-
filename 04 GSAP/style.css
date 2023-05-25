@@ -1,6 +1,11 @@
-h3:after{
-    contain:'';
+span{
+    display: block;
+}
+
+span:after{
+    content:'';
     position:absolute;
+    background: white;
     left:0;
     width: 100%;
     height:100%;

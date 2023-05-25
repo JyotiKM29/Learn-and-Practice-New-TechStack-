@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>GSAP</title>
   </head>
   <body>
@@ -31,50 +31,58 @@
       </div>
       <div class="flex flex-col">
         <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
-            Practice makes things perfect
+          Practice makes things perfect
         </h2>
         <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
-            Repeat things
+          Repeat things
         </h2>
         <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
-            Imange Things in mind
+          Imange Things in mind
         </h2>
         <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
-            just start doing
+          just start doing
         </h2>
         <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
-            Practice makes things perfect
+          Practice makes things perfect
         </h2>
         <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
-            Repeat things
+          Repeat things
         </h2>
         <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
-            Imange Things in mind
+          Imange Things in mind
         </h2>
         <h2 class="anime text-3xl font-bold ml-6 text-gray-800" id="anime">
-            just start doing
+          just start doing
         </h2>
       </div>
 
-
-      <div class="text-5xl font-bold  p-2 mt-12 ml-12 text-red-500">
-        <h3 id="anime2">Live your Dream ...</h3>
-        <h3 id="anime2">You Made this ,</h3>
-        <h3 id="anime2">Billion dollar Company</h3>
+      <div class="text-5xl font-bold p-2 mt-12 ml-12 text-red-500">
+        <div><span id="anime2">Live your Dream ...</span></div>
+        <div><span id="anime2">You Made this ,</span></div>
+        <div><span id="anime2">Billion dollar Company</span></div>
       </div>
     </secction>
-
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+
     <script>
-      gsap.from("p", { opacity: 0, duration: 1, y: -100 , ease: Sine.easeOut  });
-      gsap.from("button,h1", {  delay:1.4 ,opacity: 0, duration: 1, y: -100 , ease: Sine.easeOut });
+      var rule = CSSRulePlugin.getRule("span:after");
 
-      gsap.from('img',{duration:1 ,y:50 ,opacity:0})
-      gsap.from('#anime', {opacity:0 ,duration: 1, y: -30, stagger:0.6})
+      gsap.from("p", { opacity: 0, duration: 1, y: -100, ease: Sine.easeOut });
+      gsap.from("button,h1", {
+        delay: 1.4,
+        opacity: 0,
+        duration: 1,
+        y: -100,
+        ease: Sine.easeOut,
+      });
 
-      gsap.from("anime2", { opacity: 0, duration: 1, y: -100 , ease: power2.easeOut  });
+      gsap.from("img", { duration: 1, y: 50, opacity: 0 });
+      gsap.from("#anime", { opacity: 0, duration: 1, y: -30, stagger: 0.6 });
 
-    //   background positioning :'200px 0px'
+      gsap.from("#anime2", { opacity: 0, duration: 1, y: -10 });
+      gsap.to(rule, { cssRule: { scaleY: 0 }, duration: 1 });
+      //   background positioning :'200px 0px'
     </script>
   </body>
 </html>
