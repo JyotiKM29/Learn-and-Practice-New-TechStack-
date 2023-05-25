@@ -3,3 +3,4 @@
 2. TailwindCss : [Manage](https://jyoti-tailwindcss-practice.netlify.app/)
 3. TypeScript
 4. GSAP : [Practice Animation](https://646f6ae58f6b3a1dba8e7ab9--spectacular-panda-5aa8dc.netlify.app/)
+5. Logo Loader : [Logo](https://stellular-bubblegum-5e4c46.netlify.app/)
