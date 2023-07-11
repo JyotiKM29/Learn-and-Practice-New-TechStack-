@@ -1,9 +1,11 @@
 import { instance } from '../server.js';
 
+
+// Check out
 export const checkout = async(req, res) => {
 
     const options = {
-        amount: 50000,  // amount in the smallest currency unit
+        amount: Number(req.body.amount * 100) , // amount in the smallest currency unit
         currency: "INR",
         // receipt: "order_rcptid_11"
       };
@@ -16,5 +18,18 @@ export const checkout = async(req, res) => {
 
       res.status(200).json({
         success: true,
+        order,
       });
+};
+
+
+// paymentVerification
+export const  paymentVerification = async(req, res) => {
+
+  
+
+    res.status(200).json({
+      success: true,
+      
+    });
 };
