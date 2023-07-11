@@ -1,5 +1,8 @@
 import {app} from './app.js';
 import Razorpay from 'razorpay';
+import { connectDB } from './config/database.js';
+
+connectDB();
 
 export var instance = new Razorpay({
     key_id: process.env.RAZORPAY_API_KEY,

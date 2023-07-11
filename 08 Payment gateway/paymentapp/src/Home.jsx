@@ -41,6 +41,8 @@ const Home = () => {
 
 }
 
+
+
   return (
     <Box p={["1vh","10vh"]}>
       <Stack h={"100vh"} alignItems="center"  justifyContent="center" direction={['column' , 'row']} >
