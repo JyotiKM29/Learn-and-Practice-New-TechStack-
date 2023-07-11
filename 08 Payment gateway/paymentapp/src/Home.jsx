@@ -2,19 +2,45 @@ import { Box, Stack } from "@chakra-ui/react";
 import React from "react";
 import Card from "./Card";
 import axios from "axios";
+// import Razorpay from 'razorpay';
 
+// import Razorpay from 'razorpay';
 
 
 const Home = () => {
 
     const checkoutHandler = async(amount) => {
+
+     const {data: {key}} = await axios.get("http://localhost:4000/api/getkey");
  
-      const {data} = await axios.post("http://localhost:4000/api/checkout",{
+      const {data: {order}} = await axios.post("http://localhost:4000/api/checkout",{
         amount
       })
 
-      console.log(data);
-    }
+    //   console.log(window);
+    const options = {
+        key, 
+        amount: order.amount, 
+        currency: "INR",
+        name: "Jyoti Kumari",
+        description: "RazorPay Gateway",
+        image: "../Jyoti 2.jpeg",
+        order_id: order.id, 
+        callback_url:"http://localhost:4000/api/paymentverification",
+        notes: {
+            "address": "Razorpay Corporate Office"
+        },
+        theme: {
+            "color": "#121212"
+        }
+    };
+    // const paymentObject = new Razorpay(options);
+
+    const razor = new window.Razorpay(options); 
+    razor.open();
+
+}
+
   return (
     <Box p={["1vh","10vh"]}>
       <Stack h={"100vh"} alignItems="center"  justifyContent="center" direction={['column' , 'row']} >

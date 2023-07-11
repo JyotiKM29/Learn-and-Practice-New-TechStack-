@@ -1,7 +1,8 @@
 import express from 'express';
-import { checkout } from '../controller/paymentController.js';
+import { checkout, paymentVerification } from '../controller/paymentController.js';
 const router = express.Router();
 
 router.route('/checkout').post(checkout);
+router.route('/paymentverification').post(paymentVerification);
 
 export default router;

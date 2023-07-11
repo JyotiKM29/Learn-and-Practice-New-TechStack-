@@ -15,3 +15,9 @@ app.use(express.urlencoded({extended: true}));
 
 app.use('/api', paymentRoute);
 
+app.get('/api/getkey', (req,res)=>
+  res.status(200).json({
+    key_id: process.env.RAZORPAY_API_KEY,
+  })
+);
+
